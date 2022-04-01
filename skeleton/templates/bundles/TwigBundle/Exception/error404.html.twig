@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Développeur web freelance à Montpellier | Parlaoz Eric{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" media="screen"  href="{{ asset('css/main.css') }}">
+{% endblock %}
+
+{% block body %}
+    <section>
+        <div class="parallax-effect">
+            <div class="container cont-1 text-center">
+            <div class="row">
+                    <p class="P-white "><strong>Erreur</strong></p>
+                    <H2 class="H2-white wow animate__animated animate__backInRight"><strong>La page demandée n'existe pas !</strong></H2>
+                    <H3 class="H3-white">Développeur web freelance</H3>
+            </div>
+                <a href="/" type="button" class="button-white btn btn-outline-light">Retourner à l'accueil</a>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

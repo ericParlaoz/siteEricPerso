@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mentions Légales{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" media="screen"  href="{{ asset('css/main.css') }}">
+{% endblock %}
+
+{% block body %}
+    <section class="section-page">
+        <div class="container mt-5">
+            <div class="card">
+                <div class="row">
+                    <h2 class="H2-color">{{ portfolio.titre }}</h2>
+                    <div class="col">
+                        <div class="block-responsive">
+                        <img class="img-fluid img-portfolio-show" src="../images/{{ portfolio.image }}" alt="">
+                        </div>
+                        </div>
+                    <div class="col">
+                        <div class="block-responsive">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <th>Technologie</th>
+                                    <td>{{ portfolio.technologie }}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <h5>Description</h5>
+                            <p class="P-porfolio-show">{{ portfolio.description }}</p>
+                            <a class="btn button-color" target="_blank" href="{{ portfolio.lien }}">Voir le site</a>
+                            <a class="btn button-color" href="{{ asset('/#portfolio') }}">Retour</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

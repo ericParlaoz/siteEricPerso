@@ -103,6 +103,18 @@ body {
     transform: scale(1.08);
 }
 
+.img-portfolio-show {
+    border-radius: 20px;
+    width: 90%;
+}
+
+.P-porfolio-show {
+    padding-right: 35px;
+}
+
+.img-tech {
+    max-width: 300px;
+}
 
 .button-color {
     color: #ffffff;
@@ -298,7 +310,7 @@ body {
 }
 
 .image-taille {
-    width: 370px;
+    max-width: 370px;
 }
 .card {
     width: auto;
@@ -311,24 +323,27 @@ body {
 /* Responsive */
 
 @media screen and (max-width: 380px) {
+    .block-responsive,
     .card {
-        width: 300px;
+        width: 330px;
         margin: auto;
     }
 
 }
 
 @media screen and (max-width: 500px) {
+    .block-responsive,
     .card {
-        width: 300px;
+        width: 330px;
         margin: auto;
     }
 
 }
 
 @media screen and (max-width: 850px) {
+    .block-responsive,
     .card {
-        width: 300px;
+        width: 330px;
         margin: auto;
         margin-bottom: 20px;
     }
@@ -346,6 +361,11 @@ body {
 }
 
 /* Page */
+.section-page {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
 .section-page {
     padding-top: 70px;
     padding-bottom: 50px;

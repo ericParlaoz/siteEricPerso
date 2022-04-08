@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block body %}
+    <h1>Portfolio</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ portfolio.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ portfolio.titre }}</td>
+            </tr>
+            <tr>
+                <th>Technologie</th>
+                <td>{{ portfolio.technologie }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ portfolio.description }}</td>
+            </tr>
+            <tr>
+                <th>Lien</th>
+                <td>{{ portfolio.lien }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ portfolio.image }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_portfolio_index') }}">back to list</a>
+
+    <a href="{{ path('app_portfolio_edit', {'id': portfolio.id}) }}">edit</a>
+
+    {{ include('admin/portfolio/_delete_form.html.twig') }}
+{% endblock %}

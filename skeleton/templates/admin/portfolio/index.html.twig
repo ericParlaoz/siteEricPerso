@@ -2,42 +2,55 @@
 
 {% block title %}Portfolio index{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}">
+{% endblock %}
+
 {% block body %}
-    <h1>Portfolio index</h1>
+    <section class="section-admin">
+    <div class="container">
+        <div class="row">
+                <div class="card-admin mx-auto">
+                    <h1>Portfolio</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titre</th>
-                <th>Technologie</th>
-                <th>Description</th>
-                <th>Lien</th>
-                <th>Image</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for portfolio in portfolios %}
-            <tr>
-                <td>{{ portfolio.id }}</td>
-                <td>{{ portfolio.titre }}</td>
-                <td>{{ portfolio.technologie }}</td>
-                <td>{{ portfolio.description }}</td>
-                <td>{{ portfolio.lien }}</td>
-                <td>{{ portfolio.image }}</td>
-                <td>
-                    <a href="{{ path('app_portfolio_show', {'id': portfolio.id}) }}">show</a>
-                    <a href="{{ path('app_portfolio_edit', {'id': portfolio.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Titre</th>
+                            <th>Technologie</th>
+                            <th>Description</th>
+                            <th>Lien</th>
+                            <th>Image</th>
+                            <th>actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for portfolio in portfolios %}
+                            <tr>
+                                <td>{{ portfolio.id }}</td>
+                                <td>{{ portfolio.titre }}</td>
+                                <td>{{ portfolio.technologie }}</td>
+                                <td>{{ portfolio.description }}</td>
+                                <td>{{ portfolio.lien }}</td>
+                                <td>{{ portfolio.image }}</td>
+                                <td>
+                                    <a class="btn btn-success" href="{{ path('app_portfolio_show', {'id': portfolio.id}) }}">show</a>
+                                    <a class="btn btn-primary" href="{{ path('app_portfolio_edit', {'id': portfolio.id}) }}">edit</a>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="6">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
 
-    <a href="{{ path('app_portfolio_new') }}">Create new</a>
+                    <a href="{{ path('app_portfolio_new') }}">Create new</a>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

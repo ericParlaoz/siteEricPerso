@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mentions Légales{% endblock %}
+{% block title %}Projets récents{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -26,9 +26,12 @@
                                     <th>Technologie</th>
                                     <td>{{ portfolio.technologie }}</td>
                                 </tr>
+                                <tr>
+                                    <th>Délai de réalisations</th>
+                                    <td>{{ portfolio.delai }}</td>
+                                </tr>
                                 </tbody>
                             </table>
-                            <h5>Description</h5>
                             <p class="P-porfolio-show">{{ portfolio.description }}</p>
                             <a class="btn button-color" target="_blank" href="{{ portfolio.lien }}">Voir le site</a>
                             <a class="btn button-color" href="{{ asset('/#portfolio') }}">Retour</a>

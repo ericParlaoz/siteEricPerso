@@ -28,6 +28,9 @@ class Portfolio
     #[ORM\Column(type: 'string', length: 255)]
     private $image;
 
+    #[ORM\Column(type: 'string', length: 255)]
+    private $delai;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -89,6 +92,18 @@ class Portfolio
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getDelai(): ?string
+    {
+        return $this->delai;
+    }
+
+    public function setDelai(string $delai): self
+    {
+        $this->delai = $delai;
 
         return $this;
     }

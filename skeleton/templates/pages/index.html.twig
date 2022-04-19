@@ -299,14 +299,14 @@
     </section>
     <section class="section9" id="contact">
         <div class="parallax-effect2">
-            <div class="container text-center">
-                <div class="para">
+            <div class="container">
+                <div class="para text-center">
                     <H2 class="H2-white-footer">Vous avez besoin d’un développeur web pour créer un site web ou une
                         application ?</H2>
                     <p class="P-white-petit">Vous souhaitez qu’on travaille ensemble ? Expliquez-moi vos besoins et je
                         vous propose un devis gratuit ainsi que mes disponibilitées.</p>
                 </div>
-                <div class="row mt-5">
+                <div class="row text-center mt-5">
                     <div class="col wow animate__animated animate__zoomIn">
                         <div class="card mx-auto">
                             <p class="H3-portfolio">Téléphone</p>
@@ -333,6 +333,29 @@
                                 <a class="text-reset" href="">38 - France</a>
                             </p>
                         </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col P-white-petit">
+                        {% for message in app.flashes('success') %}
+                            <div class="alert alert-success">
+                                Merci de votre message, je reviens vers vous au plus tôt
+                            </div>
+                        {% endfor %}
+                        {{ form_start(form) }}
+                        {{ form_row(form.nom) }}
+                        {{ form_row(form.telephone) }}
+                        {{ form_row(form.email) }}
+                        {{ form_row(form.message) }}
+                        {{ form_row(form.rgpd) }}
+                        J’autorise ce site à conserver mes données personnelles transmises via ce formulaire. Aucune
+                        exploitation commerciale ne sera faite des données conservées. Voir notre politique de
+                        gestion des données personnelles sur la page (Politique de confidentialité)
+                        <br>
+                        <button type="submit" class="button-white btn btn-outline-light mt-3 mb-5 ">Envoyer</button>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
                     </div>
                 </div>
             </div>

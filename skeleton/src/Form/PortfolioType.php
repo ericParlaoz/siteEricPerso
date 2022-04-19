@@ -17,6 +17,7 @@ class PortfolioType extends AbstractType
             ->add('description')
             ->add('lien')
             ->add('image')
+            ->add('delai')
         ;
     }
 

@@ -24,7 +24,7 @@ body {
 .H2-color {
     font-family: 'Abel', sans-serif;
     color: #1d3f74;
-    font-size: 40px;
+    font-size: 45px;
     padding-bottom: 15px;
     margin-top: 10px;
 }
@@ -208,7 +208,7 @@ body {
 .H2-white {
     color: white;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 45px;
 }
 
 .H2-white-grand {
@@ -279,9 +279,10 @@ body {
     padding-top: 50px;
 }
 
-.section-admin {
+.section-page {
     padding-top: 100px;
     padding-bottom: 100px;
+    background-color: #f3f4f6;
 }
 
 .card-login {
@@ -354,7 +355,7 @@ body {
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .block-responsive,
     .card {
         width: 330px;
@@ -363,14 +364,22 @@ body {
 
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (min-width: 600px) {
     .block-responsive,
     .card {
-        width: 330px;
+        width: 500px;
         margin: auto;
         margin-bottom: 20px;
     }
+}
 
+@media screen and (min-width: 1000px) {
+    .block-responsive,
+    .card {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
 }
 
 @media only screen and (max-device-width: 1366px) {

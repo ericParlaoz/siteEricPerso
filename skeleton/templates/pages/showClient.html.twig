@@ -4,38 +4,34 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" type="text/css" media="screen"  href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}">
 {% endblock %}
 
 {% block body %}
     <section class="section-page">
         <div class="container mt-5">
             <div class="card">
-                <div class="row">
-                    <h2 class="H2-color">{{ portfolio.titre }}</h2>
+                <div class="row align-items-center">
                     <div class="col">
                         <div class="block-responsive">
                         <img class="img-fluid img-portfolio-show" src="../images/{{ portfolio.image }}" alt="">
                         </div>
-                        </div>
+                    </div>
                     <div class="col">
-                        <div class="block-responsive">
-                            <table class="table">
-                                <tbody>
-                                <tr>
-                                    <th>Technologie</th>
-                                    <td>{{ portfolio.technologie }}</td>
-                                </tr>
-                                <tr>
-                                    <th>Délai de réalisation</th>
-                                    <td>{{ portfolio.delai }}</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <p class="P-porfolio-show">{{ portfolio.description }}</p>
-                            <a class="btn button-color" target="_blank" href="{{ portfolio.lien }}">Voir le site</a>
-                            <a class="btn button-color" href="{{ asset('/#portfolio') }}">Retour</a>
+                        <h2 class="H2-color">{{ portfolio.titre }}</h2>
+                        <div class="row">
+                            <div class="col"><H5><strong>Technologie</strong></H5></div>
+                            <div class="col">{{ portfolio.technologie }}</div>
+                            <hr>
                         </div>
+                        <div class="row">
+                            <div class="col"><H5><strong>Délai de réalisation</strong></H5></div>
+                            <div class="col">{{ portfolio.delai }}</div>
+                            <hr>
+                        </div>
+                        <p class="P-porfolio-show">{{ portfolio.description }}</p>
+                        <a class="btn button-color" target="_blank" href="{{ portfolio.lien }}">Voir le site</a>
+                        <a class="btn button-color" href="{{ asset('/#portfolio') }}">Retour</a>
                     </div>
                 </div>
             </div>

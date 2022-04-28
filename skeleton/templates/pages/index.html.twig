@@ -24,15 +24,16 @@
     <section class="section1">
         <div class="parallax-effect">
             <div class="cont-1 container">
-                <div class="row">
+                <div class="row text-center ">
                     <div class="col">
-                        <p class="P-white ">Hello !</p>
-                        <H2 class="H2-white wow animate__animated animate__backInRight"><strong>Je m’appel éric
+                        <H2 class="H2-white-grand mt-5 wow animate__animated animate__backInRight"><strong>Éric
                                 PARLAOZ</strong></H2>
-                        <H1 class="H3-white">Développeur web freelance</H1>
-                        <a href="#qui" type="button" class="button-white btn btn-outline-light">Qui suis-je ?</a></div>
-                    <div class="col-4 mx-auto">
+                        <H1 class="H3-white">Développeur web - Graphiste</H1>
+                        <a href="{{ asset('#qui') }}">
+                            <button type="button" class="button-white btn mt-5 mb-5">Qui suis-je ?</button>
+                        </a>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -71,7 +72,7 @@
                     d’obtention du Titre de Développeur Web Full-Stack, j’ai travaillé pour de nombreuses entreprises
                     très différentes sur Sète, Montpellier et dans le monde entier.</p>
             </div>
-            <div class="row mt-6">
+            <div class="row mt-5">
                 <div class="col wow animate__animated animate__zoomIn">
                     <div class="card mx-auto mb-5">
                         <H3 class="H3-bleu">Développement Web</H3>
@@ -173,39 +174,45 @@
             <div class="row text-center justify-content-center">
                 <div class="col wow animate__animated animate__tada">
                     <div class="block-responsive">
-                    <H2 class="H2-white-grand wow animate__animated animate__bounce">+1500</H2>
-                    <p class="P-white-grand">De projets clients traités</p>
+                        <H2 class="H2-white-grand wow animate__animated animate__bounce">+1500</H2>
+                        <p class="P-white-grand">De projets clients traités</p>
                     </div>
                 </div>
                 <div class="col wow animate__animated animate__tada">
                     <div class="block-responsive">
-                    <H2 class="H2-white-grand">5 ans</H2>
-                    <p class="P-white-grand">D'expérience dans le domaine du web</p>
-                </div>
+                        <H2 class="H2-white-grand">5 ans</H2>
+                        <p class="P-white-grand">D'expérience dans le domaine du web</p>
+                    </div>
                 </div>
                 <div class="col wow animate__animated animate__tada">
                     <div class="block-responsive">
-                    <H2 class="H2-white-grand">100%</H2>
-                    <p class="P-white-grand">D'investissement donné dans chaque projet</p>
+                        <H2 class="H2-white-grand">100%</H2>
+                        <p class="P-white-grand">D'investissement donné dans chaque projet</p>
                     </div>
-                    </div>
+                </div>
             </div>
         </div>
     </section>
     <section class="section5">
-        <div class="container cont-3 ">
+        <div class="container ">
             <div class="row sm-5 align-items-center">
-                <div class="col mt-5">
-                    <img class="image-taille align-items-center mb-5"
-                         src="{{ asset('images/choisir-un-webmaster.png') }}" alt="">
+                <div class="col-sm-7 mt-5">
+                    <div class="block-responsive">
+                        <img class="img-fluid align-items-center wow animate__animated animate__zoomIn mb-5"
+                             src="{{ asset('images/portfolio-developpeur-web.png') }}" alt="">
+                    </div>
                 </div>
                 <div class="col wow animate__animated animate__fadeInRight">
                     <H2 class="H2-color">
-                        Avez-vous un projet à l’esprit ?
+                        Démarquez-vous
+                        avec un site dynamique
                     </H2>
-                    <p>Besoin d’un développeur web freelance ?
+                    <p>Création sur mesure (site vitrine, e-commerce, blog, …) de qualité avec de véritables atouts
+                        (unique, facile d’utilisation, personnalisable, …), idéale pour lancer votre projet.
                     </p>
-                    <a href="#portfolio" type="button" class="button-color btn btn-primary">Voir mon portfolio</a>
+                    <a href="{{ asset('#portfolio') }}">
+                        <button type="button" class="button-color btn btn-primary">Voir mon portflio</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -228,7 +235,9 @@
                     </div>
                 {% endfor %}
             </div>
-            <a href="#contact" type="button" class="button-color btn btn-primary">Me contacter</a>
+            <a href="{{ asset('#contact') }}">
+                <button type="button" class="button-color btn btn-primary">Me contacter</button>
+            </a>
         </div>
     </section>
     <section class="section7">
@@ -245,7 +254,9 @@
                         un accompagnement très global. Du design de site internet à l’optimisation en passant par la
                         création ou la mise à jour de ceux-ci, je vous accompagne du début à la fin de votre projet
                     </p>
-                    <a href="#clients" type="button" class="button-white btn btn-outline-light">Avis clients</a>
+                    <a href="{{ asset('#clients') }}">
+                        <button type="button" class="button-white btn">Avis clients</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -301,7 +312,7 @@
         <div class="parallax-effect2">
             <div class="container">
                 <div class="para text-center">
-                    <H2 class="H2-white-footer">Vous avez besoin d’un développeur web pour créer un site web ou une
+                    <H2 class="H2-white">Vous avez besoin d’un développeur web pour créer un site web ou une
                         application ?</H2>
                     <p class="P-white-petit">Vous souhaitez qu’on travaille ensemble ? Expliquez-moi vos besoins et je
                         vous propose un devis gratuit ainsi que mes disponibilitées.</p>
@@ -356,8 +367,8 @@
                         {{ form_end(form) }}
                     </div>
                 </div>
-                    </div>
-                </div>
+            </div>
+        </div>
 
     </section>
 {% endblock %}
